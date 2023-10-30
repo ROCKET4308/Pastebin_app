@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -17,4 +19,9 @@ public class Post {
     @Id
     @GeneratedValue
     Integer postId;
+    String postName;
+    String postText;
+    LocalDateTime creationTime;
+    LocalDateTime deletionTime;
+
 }
