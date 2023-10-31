@@ -3,10 +3,7 @@ package com.rocket.postservice.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -24,4 +21,14 @@ public class Post {
     LocalDateTime creationTime;
     LocalDateTime deletionTime;
 
+    public Post(String postName, String postText) {
+        this.postName = postName;
+        this.postText = postText;
+    }
+
+    public Post(String postName, String postText, LocalDateTime creationTime) {
+        this.postName = postName;
+        this.postText = postText;
+        this.creationTime = creationTime;
+    }
 }
