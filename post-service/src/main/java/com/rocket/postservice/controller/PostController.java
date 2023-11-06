@@ -38,5 +38,12 @@ public class PostController {
         return postService.postCleanup();
     }
 
+    @DeleteMapping("/deletePost")
+    @ResponseStatus(HttpStatus.OK)
+    public Post deletePostByName(@RequestParam String postName){
+        return postService.deletePostByName(postName);
+    }
+
+
 
 }

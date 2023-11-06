@@ -18,4 +18,6 @@ public interface PostRepository extends JpaRepository<Post, Integer> {
         @Transactional
         @Query("DELETE FROM Post m WHERE m.deletionTime < :date")
         Integer removeOlderThan(@Param("date") LocalDateTime date);
+
+    Post removeByPostName(String postName);
 }

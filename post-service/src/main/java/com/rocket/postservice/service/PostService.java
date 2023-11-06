@@ -31,4 +31,8 @@ public class PostService {
     public Integer postCleanup(){
         return postRepository.removeOlderThan(LocalDateTime.now());
     }
+
+    public Post deletePostByName(String postName) {
+        return postRepository.removeByPostName(postName);
+    }
 }
